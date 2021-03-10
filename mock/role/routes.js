@@ -73,7 +73,7 @@ const constantRoutes = [
 ]
 
 const asyncRoutes = [
-  {
+  /*{
     path: '/permission',
     component: 'layout/Layout',
     redirect: '/permission/index',
@@ -519,7 +519,7 @@ const asyncRoutes = [
         meta: { title: 'External Link', icon: 'link' }
       }
     ]
-  },
+  },*/
 
   { path: '*', redirect: '/404', hidden: true }
 ]

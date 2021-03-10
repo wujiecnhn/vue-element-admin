@@ -79,7 +79,7 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+        meta: { title: '首页', icon: 'dashboard', affix: true }
       }
     ]
   },
@@ -91,7 +91,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/documentation/index'),
         name: 'Documentation',
-        meta: { title: 'Documentation', icon: 'documentation', affix: true }
+        meta: { title: '文档目录', icon: 'documentation', affix: true }
       }
     ]
   },
@@ -104,10 +104,26 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/guide/index'),
         name: 'Guide',
-        meta: { title: 'Guide', icon: 'guide', noCache: true }
+        meta: { title: '使用指导', icon: 'guide', noCache: true }
       }
     ]
   },
+  {
+    path: '/abc',
+    component: Layout,
+    redirect: '/abc/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/abc/index'),
+        name: 'Guide',
+        meta: { title: '功能示例', icon: 'el-icon-monitor', noCache: true }
+      }
+    ]
+  },
+
+
+  // 隐藏页面
   {
     path: '/profile',
     component: Layout,
@@ -129,7 +145,7 @@ export const constantRoutes = [
  * the routes that need to be dynamically loaded based on user roles
  */
 export const asyncRoutes = [
-  {
+  /*{
     path: '/permission',
     component: Layout,
     redirect: '/permission/page',
@@ -184,7 +200,7 @@ export const asyncRoutes = [
     ]
   },
 
-  /** when your routing map is too long, you can split it into small modules **/
+  /!** when your routing map is too long, you can split it into small modules **!/
   componentsRouter,
   chartsRouter,
   nestedRouter,
@@ -381,7 +397,7 @@ export const asyncRoutes = [
         meta: { title: 'External Link', icon: 'link' }
       }
     ]
-  },
+  },*/
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
