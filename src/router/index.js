@@ -116,7 +116,7 @@ export const constantRoutes = [
       {
         path: 'index',
         component: () => import('@/views/abc/index'),
-        name: 'Guide',
+        name: 'Abc',
         meta: { title: '功能示例', icon: 'el-icon-monitor', noCache: true }
       }
     ]
